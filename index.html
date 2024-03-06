@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle De Finanças</title>
+    <link rel="stylesheet" href="./Style/style.css">
+    <script src='https://cdn.plot.ly/plotly-2.29.1.min.js'></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <main>
+        <div class="container lineUp">
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <h3 class="animate-charcter"> Controle Financeiro</h3>
+              </div>
+            </div>
+          </div>
+
+        <div class="resume lineUp">
+          <div>
+            Entradas: R$
+            <span class="incomes">0.00</span>
+          </div>
+          <div>
+            Saídas: R$
+            <span class="expenses">0.00</span>
+          </div>
+          <div>
+            Total: R$
+            <span class="total">0.00</span>
+          </div>
+        </div>
+        <div class="newItem lineUp">
+          <div class="divDesc">
+            <label for="desc">Descrição:</label>
+
+            <form class="form">
+                <button>
+                </button>
+                <input class="input" placeholder="Digite um nome:" required="" type="text" id="desc">
+                <button class="reset" type="reset">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </form>
+          </div>
+          <div class="divAmount">
+            <label for="amount">Valor:</label>
+
+              <form class="form">
+                <button>
+                </button>
+                <input class="input" placeholder="Digite um valor:" required="" type="number" id="amount">
+                <button class="reset" type="reset">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </form>
+              
+          </div>
+
+          <section id="selc2">
+            <div class="divType">
+                <label for="type">Tipo:</label>
+                <select id="type">
+                  <option class="text2">Entrada</option>
+                  <option class="text2">Saída</option>
+                </select>
+              </div>
+          </section>
+
+        </div>
+
+        <button id="btnNew" class="lineUp">
+            <span>Incluir</span>
+            <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width="3"></circle>
+                <path d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z" fill="black"></path>
+            </svg>
+        </button>
+
+        <div class="divTable">
+          <table>
+            <thead>
+              <tr>
+                <th>Descrição</th>
+                <th class="columnAmount">Valor</th>
+                <th class="columnType">Tipo</th>
+                <th class="columnAction"></th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+          
+        <div id='graphic'><!-- Plotly chart will be drawn inside this DIV --></div>
+      </main>  
+
+    <script src="./Script/script.js"></script>
+</body>
+</html>
